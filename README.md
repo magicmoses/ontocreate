@@ -5,6 +5,9 @@
   a few checkpoints. The build is autonomous and credential-free; you only
   steer at the gates.
 
+  The flow: CQs/scope → direction (reuse, profile, provenance) → draft
+  structure → validation + evaluation.
+
   The framework is the product. Applying it to a specific domain is a
   separate step.
 
