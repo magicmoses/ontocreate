@@ -1,0 +1,31 @@
+# Baseline toolset (spec §8) — domain-agnostic, credential-free. Always installable via pip.
+# Per-project / domain-specific dependencies go in input/dependencies.md (library-scout, §9), NOT here.
+
+# --- Core RDF / OWL ---
+rdflib                 # RDF/OWL graphs + SPARQL; the in-memory store for the whole build
+owlready2              # OWL manipulation + reasoner integration (ships HermiT; needs Java for DL)
+owlrl                  # OWL 2 RL rule materialisation on rdflib, pure-Python, in-process (RL profile)
+pySHACL                # SHACL constraint validation
+
+# --- Docs / visualization ---
+pyLODE                 # human-readable HTML docs from an OWL file
+#   WebVOWL is a web app (not pip) — see ontology-visualization skill for the fallback renderer.
+
+# --- Input conversion (input layer) ---
+markitdown             # lightweight converter: PDF/Word/PPT/Excel/HTML -> text/Markdown
+pypdf                  # proven fallback for PDF
+python-docx            # proven fallback for Word
+pandas                 # proven fallback for tabular / data-profile
+
+# --- Optional / per-profile / per-level (pull only when chosen) ---
+# prov                 # W3C PROV — only when provenance level L3 is selected
+# spacy                # term/phrase extraction to support Step 3 (optional)
+# fastmcp              # wrap framework tools as MCP servers — only when no ready-made server fits (§9)
+# pyoxigraph           # embeddable persistent RDF store (Oxigraph) — credential-free alternative to in-memory
+
+# --- NOT pip (documented, installed per chosen OWL profile / out of scope of the build) ---
+#   ELK     — OWL 2 EL reasoner (Java)        -> EL profile
+#   Ontop   — OWL 2 QL / OBDA reasoner (Java) -> QL profile
+#   HermiT  — ships with owlready2 (Java)     -> DL profile
+#   RDFox   — high-performance RL (commercial)-> RL profile alternative
+#   neosemantics (n10s) + Neo4j driver        -> the OPTIONAL /migrate-neo4j kit only, never the build

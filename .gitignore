@@ -1,0 +1,26 @@
+# Secrets — never commit (only used by the optional /migrate-neo4j step)
+.env
+.env.*
+*.secret
+
+# Claude Code local session state (machine-generated; per-machine permission allowlist, etc.)
+.claude/settings.local.json
+*.local.json
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+*.egg-info/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Note: output/ is intentionally NOT ignored — ontology.ttl, the docs, the scorecard, and the
+# git-versioned project memory (project-memory.json + events.jsonl) are deliverables + the audit trail.
