@@ -119,13 +119,10 @@
 
   - W3C (2012). OWL 2 Web Ontology Language Profiles (Second Edition). W3C
   Recommendation, 11 December 2012. Profiles EL, QL, RL.
-  - W3C (2017). Shapes Constraint Language (SHACL). W3C Recommendation, 20
-  July 2017.
-  - W3C (2013). PROV-O: The PROV Ontology. W3C Recommendation, 30 April
-  2013.
+  - W3C (2017). Shapes Constraint Language (SHACL). W3C Recommendation, 20 July 2017.
+  - W3C (2013). PROV-O: The PROV Ontology. W3C Recommendation, 30 April 2013.
   - W3C (2014). RDF 1.1 Concepts and Abstract Syntax. W3C Recommendation, 25
-  February 2014. With RDF-star (W3C Community Group Final Report, December
-  2021) for statement-level provenance.
+  February 2014. With RDF-star (W3C Community Group Final Report, December 2021) for statement-level provenance.
 
   Implementation builds on rdflib, owlready2, pySHACL, owlrl, and pyLODE,
   with the ELK, HermiT, and Ontop reasoners. See `requirements.txt`.
